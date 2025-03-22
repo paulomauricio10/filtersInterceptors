@@ -1,43 +1,38 @@
-# Spring Boot Filters vs. Interceptors
+# Spring Boot: Filters e Interceptors
 
-## 📌 Overview
-This project demonstrates the **differences between Filters and Interceptors** in Spring Boot. It provides examples of how each mechanism works, their use cases, and best practices for handling **request logging, authentication, API rate limiting, and request modifications**.
+## 🔍 Visão Geral
+Este projeto explora as **diferenças entre Filters e Interceptors** no Spring Boot. Ele apresenta exemplos práticos de como cada mecanismo funciona, seus principais cenários de uso e as melhores práticas para tarefas como **registro de requisições, autenticação, controle de taxa de chamadas e modificação de requisições**.
 
-## 🚀 Features
-- **Filter Example**: Demonstrates request pre-processing at the **Servlet level**.
-- **Interceptor Example**: Shows how to modify requests before and after controller execution.
-- **Comparison Guide**: Highlights when to use Filters vs. Interceptors.
-- **Logging & Performance Monitoring**: Implements request timing analysis.
+## 🌟 Funcionalidades
+- **Exemplo de Filter**: Demonstra como interceptar requisições HTTP
+- **Exemplo de Interceptor**: Apresenta como manipular requisições antes e depois da execução dos controllers.
+- **Guia Comparativo**: Explica quando escolher Filters ou Interceptors para diferentes cenários.
+- **Monitoramento de Desempenho**: Implementa medição de tempo de requisição para fins de log e análise.
 
-## 🛠️ Technologies Used
-- **Java 17+**
+## 🛠️ Tecnologias Utilizadas
+- **Java 17 ou superior**
 - **Spring Boot**
+- **MySQL**
 - **Spring MVC**
 - **Maven**
 
-## 📂 Project Structure
+
+## 📁 Estrutura do Projeto
 ```
-spring-boot-filters-interceptors/
-├── src/main/java/io/igventurelli/spring_boot_filters_interceptors
+filtersInterceptors/
+├── src/main/java/com/filterinterceptors
+│   ├── config/                 # Spring configuration for interceptors
+│   ├── controller/             # Rest Controllers to showcase behavior
+│   ├── dto/             		# Records that work as DTO's
 │   ├── filter/                 # Servlet Filters implementation
 │   ├── interceptor/            # Spring Interceptor examples
-│   ├── controller/             # Controllers to showcase behavior
-│   ├── config/                 # Spring configuration for interceptors
-│   └── DemoApplication.java    # Main Spring Boot application
+│   ├── model/            		# Entities mapped to MySQL tables
+│   ├── repository/            	# Hibernate classes to access database
+│   ├── services/            	# Business logics
+│   └── FiltersInterceptorsApplication.java    # Main Spring Boot application
 ```
 
-## ⚡ Getting Started
-### **Clone the Repository**
+## 🚀 Como Iniciar
+### **Clonando o Repositório**
 ```sh
-git clone https://github.com/igventurelli/examples.git
-cd examples/spring-boot-filters-interceptors
-```
-
-### **Run with Maven**
-```sh
-mvn spring-boot:run
-```
-
-## 📜 License
-This project is for educational purposes only and is not intended for production use without further optimization and testing.
-
+git clone https://github.com/paulomauricio10/filtersInterceptors.git
